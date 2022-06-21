@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto:wght@300&display=swap');
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    z-index: 100;
+    position: relative;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.team {
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+    margin: 8px;
+    border: 3px solid var(--backgroundColor);
+    outline: 4px solid var(--darkColor);
+    border-radius: 16px;
+    position: relative;
+    background-color: #ffffff34;
+    transition: all 1s ease-in-out;
+}
+
+.team::before {
+    content: '';
+    background-image: url('../../public/static/test.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    filter: blur(4px) grayscale(100%);
+    transition: all 1s ease-in-out;
+}
+
+.img {
+    position:relative;
+    width: 320px;
+    height: 480px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.team .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 480px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: contain;
+    border: none;
+    transition: height 0.5s ease-in-out, width 0.5s ease-in-out, top 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+.team:hover .img {
+    width: 240px;
+    height: 240px;
+    border: 3px solid var(--backgroundColor);
+    left: 40px;
+    top: 60px;
+}
+
+.team .info {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: var(--backgroundColor);
+    padding: 16px;
+    border-top: 8px solid var(--backgroundColor);
+    border-radius: 50% 50% 0px 0px;
+    padding-top: 80px;
+    text-align: center;
+    transform: scale(2);
+    transition: all 0.5s ease-in-out;
+}
+
+.team .name {
+    font-size: 24px;
+    padding: 16px;
+    text-transform: capitalize;
+    transform: translateY(-40%);
+}
+
+.team .title {
+    color: grey;
+    text-transform: capitalize;
+    transform: translateY(-170%);
+    font-family: 'Jockey One', sans-serif;
+}
+
+.team:hover .info {
+    transform: scale(1)
+}
+
+.team .social {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-block: 16px;
+    font-size: 24px;
+    transform: translateY(-30%);
+}
+
+.socialIcon {
+    width: 60px;
+    height: 50px;
+}
+
+.team .social .socialIcon {
+    display: inline-block;
+    width: 48px;
+    padding: 12px;
+    outline: 2px solid var(--backgroundColor);
+    border-radius: 16px;
+    margin: 4px;
+    cursor: pointer;
+}

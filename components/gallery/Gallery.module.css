@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto:wght@300&display=swap');
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2ch;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+    height: 75vh;
+    padding: 1rem;
+    overflow: auto;
+}
