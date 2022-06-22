@@ -52,7 +52,9 @@ export default function Home() {
       <Head>
         <title>Saint Tropez Beach - Acasa</title>
       </Head>
-      <div className={styles.backgroundImage}></div>
+      <div className={styles.backgroundImage}>
+        <Image src={"/static/palmTree.png"} alt="" layout="fill" />
+      </div>
       <div className={styles.header}>
         <div
           className={styles.logoSpace}
