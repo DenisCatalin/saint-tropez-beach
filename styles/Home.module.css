@@ -13,7 +13,7 @@
 .backgroundImage {
     width: 100%;
     min-height: 100vh;
-    background-image: url("../public/palmTree.png");
+    background-image: url("../public/static/palmTree.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
