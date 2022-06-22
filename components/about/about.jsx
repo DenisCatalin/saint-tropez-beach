@@ -16,7 +16,6 @@ const About = () => {
             <div className={styles.socialIcon}>
               <Image
                 src={"/static/facebook-dark.svg"}
-                class
                 alt=""
                 width="150"
                 height="150"
@@ -25,7 +24,6 @@ const About = () => {
             <div className={styles.socialIcon}>
               <Image
                 src={"/static/instagram-dark.svg"}
-                class
                 alt=""
                 width="150"
                 height="150"
@@ -34,7 +32,6 @@ const About = () => {
             <div className={styles.socialIcon}>
               <Image
                 src={"/static/twitter-dark.svg"}
-                class
                 alt=""
                 width="150"
                 height="150"

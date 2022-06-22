@@ -4,6 +4,7 @@ import styles from "./Homepage.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Weather from "../weather/weather";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -41,15 +42,18 @@ const Home = () => {
             scale: 0.8,
           }}
         >
-          <Image
-            src={"/static/Twitter.svg"}
-            alt="Twitter"
-            width={25}
-            height={25}
-          />
+          <Link href="tel:0721828383">
+            <a>
+              <Image
+                src={"/static/phone.svg"}
+                alt="Twitter"
+                width={25}
+                height={25}
+              />
+            </a>
+          </Link>
         </motion.button>
       </div>
-      <button className={styles.contactButton}>CONTACT</button>
       <Weather />
     </motion.div>
   );

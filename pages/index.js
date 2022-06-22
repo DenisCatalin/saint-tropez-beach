@@ -8,13 +8,16 @@ import Menu from "../components/menu/Menu";
 import Gallery from "../components/gallery/gallery";
 import Schedule from "../components/schedule/schedule";
 import About from "../components/about/about";
+import useWindowDimensions from "../utils/useWindowDimensions";
 
 export default function Home() {
-  const [pressHome, setPressHome] = useState(true);
-  const [pressMenu, setPressMenu] = useState(false);
+  const [pressHome, setPressHome] = useState(false);
+  const [pressMenu, setPressMenu] = useState(true);
   const [pressSchedule, setPressSchedule] = useState(false);
   const [pressGallery, setPressGalery] = useState(false);
   const [pressAbout, setPressAbout = false] = useState(false);
+
+  const { height } = useWindowDimensions();
 
   const resetNavbar = () => {
     setPressHome(false);
@@ -26,13 +29,13 @@ export default function Home() {
 
   const pressed = {
     rotate: 45,
-    y: -55,
+    y: height > 750 ? -55 : -40,
     outline: "5px solid rgba(84, 171, 183, 1)",
   };
 
   const pressedLast = {
     rotate: 45,
-    y: -55,
+    y: height > 750 ? -55 : -40,
     scale: 0.9,
     outline: "5px solid rgba(84, 171, 183, 1)",
   };
@@ -58,7 +61,7 @@ export default function Home() {
             setPressHome(true);
           }}
         >
-          <Image src={"/static/logo.png"} alt="" layout="fill" />
+          <Image src={"/static/log00.png"} alt="" layout="fill" />
         </div>
       </div>
 
@@ -73,7 +76,7 @@ export default function Home() {
           <motion.p
             className={pressHome ? styles.navbarTextPressed : styles.navbarText}
             animate={{
-              y: pressHome ? 50 : 0,
+              y: pressHome ? (height > 750 ? 50 : 40) : 0,
             }}
           >
             ACASA
@@ -102,7 +105,7 @@ export default function Home() {
               pressSchedule ? styles.navbarTextPressed : styles.navbarText
             }
             animate={{
-              y: pressSchedule ? 50 : 0,
+              y: pressSchedule ? (height > 750 ? 50 : 40) : 0,
             }}
           >
             PROGRAM
@@ -130,7 +133,7 @@ export default function Home() {
           <motion.p
             className={pressMenu ? styles.navbarTextPressed : styles.navbarText}
             animate={{
-              y: pressMenu ? 50 : 0,
+              y: pressMenu ? (height > 750 ? 50 : 40) : 0,
             }}
           >
             MENIU
@@ -159,7 +162,7 @@ export default function Home() {
               pressGallery ? styles.navbarTextPressed : styles.navbarText
             }
             animate={{
-              y: pressGallery ? 50 : 0,
+              y: pressGallery ? (height > 750 ? 50 : 40) : 0,
             }}
           >
             GALERIE
@@ -188,7 +191,7 @@ export default function Home() {
               pressAbout ? styles.navbarTextPressed : styles.navbarText
             }
             animate={{
-              y: pressAbout ? 50 : 0,
+              y: pressAbout ? (height > 750 ? 50 : 40) : 0,
             }}
           >
             DESPRE

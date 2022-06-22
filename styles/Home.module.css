@@ -30,8 +30,8 @@
 }
 
 .logoSpace {
-    width: 55%;
-    height: 100%;
+    width: 250px;
+    height: 190px;
     position: relative;
 }
 
@@ -80,4 +80,38 @@
     width: 35px;
     height: 35px;
     position: relative;
+}
+
+@media screen and (max-width: 385px) and (max-height: 750px) {
+    .logoSpace {
+        width: 160px;
+        height: 120px;
+        position: relative;
+    }
+    
+    .navbarButton {
+        width: 45px;
+        height: 45px;
+        background: var(--darkColor);
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navbarTextPressed {
+        font-size: 1em;
+    }
+    
+    .navbarText {  
+        font-size: .8em;
+    }
+    
+    .navbarAlo {
+        width: 25px;
+        height: 25px;
+        position: relative;
+    }
 }

@@ -12,6 +12,8 @@ module.exports = {
       "res.cloudinary.com",
       "www.pexels.com",
       "pexels.com",
+      "i.ibb.co",
+      "www.instagram.com",
     ],
   },
 };

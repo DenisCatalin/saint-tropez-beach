@@ -1,10 +1,8 @@
 const fs = require("fs");
-import { getRacoritoare } from "../../lib/racoritoare";
+import { getRacoritoare } from "../../lib/menu";
 
 export default function handler(req, res) {
-  const racoritoare = getRacoritoare();
-
-  const file = req ? JSON.parse(req.headers.body).file : null;
+  const menu = getRacoritoare();
   const numeProdus = req ? JSON.parse(req.headers.body).numeProdus : null;
   const descriereProdus = req
     ? JSON.parse(req.headers.body).descriereProdus
@@ -12,8 +10,9 @@ export default function handler(req, res) {
   const pretProdus = req ? JSON.parse(req.headers.body).pretProdus : null;
   const method = req ? JSON.parse(req.headers.body).method : null;
   const id = req ? JSON.parse(req.headers.body).itemID : null;
+  const categ = req ? JSON.parse(req.headers.body).categorieProdus : null;
   fs.readFile(
-    `./data/${file}.json`,
+    "./data/menu.json",
     "utf8",
     function readFileCallback(err, _data) {
       if (err) {
@@ -21,23 +20,17 @@ export default function handler(req, res) {
         res.status(500).send({ done: false });
       } else {
         const obj = {
-          items: [...racoritoare],
+          items: [...menu],
         };
 
         switch (method) {
           case "update": {
-            console.log("CE PLM AM PRIMIT: ", numeProdus);
-            racoritoare.map((item, i) => {
+            menu.map((item, i) => {
               if (i === id) {
-                console.log(
-                  "asta e",
-                  item.numeProdus,
-                  item.pretProdus,
-                  item.descriereProdus
-                );
                 item.numeProdus = numeProdus;
                 item.pretProdus = pretProdus;
                 item.descriereProdus = descriereProdus;
+                item.categorieProdus = categ;
               }
             });
             break;
@@ -47,11 +40,12 @@ export default function handler(req, res) {
               numeProdus: numeProdus,
               descriereProdus: descriereProdus,
               pretProdus: pretProdus,
+              categorieProdus: categ,
             });
             break;
           }
           case "delete": {
-            const findProd = racoritoare.findIndex((item, i) => {
+            const findProd = menu.findIndex((item, i) => {
               if (item.numeProdus === numeProdus) {
                 if (i === 0) {
                   obj.items.shift();
@@ -70,7 +64,7 @@ export default function handler(req, res) {
 
         const json = JSON.stringify(obj);
         fs.writeFile(
-          `./data/${file}.json`,
+          "./data/menu.json",
           json,
           {
             encoding: "utf8",
@@ -82,7 +76,7 @@ export default function handler(req, res) {
             else {
               console.log("File written successfully\n");
               console.log("The written has the following contents:");
-              console.log(fs.readFileSync(`./data/${file}.json`, "utf8"));
+              console.log(fs.readFileSync("./data/menu.json", "utf8"));
             }
           }
         );

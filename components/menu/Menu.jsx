@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getRacoritoare } from "../../lib/racoritoare";
+import { getRacoritoare, getCategories } from "../../lib/menu";
 import Cookies from "js-cookie";
 
 const Menu = () => {
@@ -12,26 +12,46 @@ const Menu = () => {
   const [inputProductName, setInputProductName] = useState("");
   const [inputProductPrice, setInputProductPrice] = useState("");
   const [inputProductDesc, setInputProductDesc] = useState("");
+  const [inputProductCateg, setInputProductCateg] = useState("");
+  // const [getLogged, setGetLogged] = useState(false);
+  const [menuList, setMenuList] = useState([]);
   const [itemID, setItemID] = useState(null);
   const [addItem, setAddItem] = useState(false);
 
   const racoritoare = getRacoritoare();
+  const category = getCategories();
+
+  let categArray = [];
+
+  useEffect(() => {
+    setMenuList(racoritoare);
+  }, []);
 
   useEffect(() => {
     console.log("re-render");
   }, [inputProductName]);
 
-  Cookies.set("logged", true);
-  const getLogged = JSON.parse(Cookies.get("logged"));
+  // useEffect(() => {
+  //   (async function () {
+  //     Cookies.set("logged", false);
+  //     setGetLogged(JSON.parse(Cookies.get("logged")));
+  //   })();
+  // }, []);
+
+  useEffect(() => {
+    categArray = menuList.filter(
+      (item) => item.categorieProdus === "racoritoare"
+    );
+  }, [categArray]);
 
   const addMenuItem = async () => {
     const res = await fetch("/api/updateMenu", {
       headers: {
         body: JSON.stringify({
-          file: "racoritoare",
           numeProdus: inputProductName,
           descriereProdus: inputProductDesc,
           pretProdus: inputProductPrice,
+          categorieProdus: inputProductCateg,
           method: "add",
         }),
       },
@@ -46,10 +66,10 @@ const Menu = () => {
     const res = await fetch("/api/updateMenu", {
       headers: {
         body: JSON.stringify({
-          file: "racoritoare",
           numeProdus: inputProductName,
           pretProdus: inputProductPrice,
           descriereProdus: inputProductDesc,
+          categorieProdus: inputProductCateg,
           itemID: itemID,
           method: "update",
         }),
@@ -64,8 +84,8 @@ const Menu = () => {
     const res = await fetch("/api/updateMenu", {
       headers: {
         body: JSON.stringify({
-          file: "racoritoare",
           numeProdus: inputProductName,
+          categorieProdus: inputProductCateg,
           method: "delete",
         }),
       },
@@ -73,7 +93,6 @@ const Menu = () => {
     const data = await res.json();
     console.log(data);
   };
-
   return (
     <motion.div className={styles.container} animate={{ scale: [0, 1] }}>
       <button
@@ -116,7 +135,7 @@ const Menu = () => {
           </Link>
         </ul>
       </motion.div>
-      {getLogged ? (
+      {/* {getLogged ? (
         <>
           <motion.div
             className={styles.inputContainer}
@@ -149,6 +168,16 @@ const Menu = () => {
                 onChange={(e) => setInputProductPrice(e.target.value)}
               />
             </div>
+            <div className={styles.inputSpace}>
+              <select
+                name="category-list"
+                id="category-list"
+                onChange={(e) => setInputProductCateg(e.target.value)}
+              >
+                <option value="Racoritoare">Racoritoare</option>
+                <option value="Bauturi Alcoolice">Bauturi Alcoolice</option>
+              </select>
+            </div>
             <button
               className={styles.editProd}
               onClick={addItem ? addMenuItem : editMenuItem}
@@ -157,9 +186,9 @@ const Menu = () => {
             </button>
           </motion.div>
         </>
-      ) : null}
+      ) : null} */}
       <div className={styles.overflow}>
-        {getLogged ? (
+        {/* {getLogged ? (
           <>
             <button className={styles.editButton}>
               {showEdit ? (
@@ -181,54 +210,57 @@ const Menu = () => {
                     setInputProductName("");
                     setInputProductPrice("");
                     setInputProductDesc("");
+                    setInputProductCateg("Racoritoare");
                   }}
                 />
               )}
             </button>
           </>
-        ) : null}
-        <section className={styles.category} id="1">
+        ) : null} */}
+        <section className={styles.category} id="racoritoare">
           <h2 className={styles.categoryName}>Racoritoare</h2>
           {racoritoare.map((item, i) => (
             <div className={styles.menuItem} key={i}>
               <div className={styles.itemName}>
                 <h2>{item.numeProdus}</h2>
-                {getLogged ? (
-                  <>
-                    <div
-                      className={styles.directProductEdit}
-                      onClick={() => {
-                        setInputProductName(item.numeProdus);
-                        setInputProductPrice(item.pretProdus);
-                        setInputProductDesc(item.descriereProdus);
-                        setItemID(i);
-                        setShowEdit(!showEdit);
-                        setAddItem(false);
-                      }}
-                    >
-                      <Image
-                        src={"/static/edit.svg"}
-                        alt=""
-                        width={40}
-                        height={40}
-                      />
-                    </div>
-                    <h2
-                      className={styles.directDeleteProduct}
-                      onClick={() => {
-                        setInputProductName(item.numeProdus);
-                        deleteMenuItem();
-                      }}
-                    >
-                      <Image
-                        src={"/static/close.svg"}
-                        alt=""
-                        width={30}
-                        height={30}
-                      />
-                    </h2>
-                  </>
-                ) : null}
+                {/* {getLogged ? (
+                    <>
+                      <div
+                        className={styles.directProductEdit}
+                        onClick={() => {
+                          setInputProductName(item.numeProdus);
+                          setInputProductPrice(item.pretProdus);
+                          setInputProductDesc(item.descriereProdus);
+                          setInputProductCateg(item.categorieProdus);
+                          setItemID(i);
+                          setShowEdit(!showEdit);
+                          setAddItem(false);
+                        }}
+                      >
+                        <Image
+                          src={"/static/edit.svg"}
+                          alt=""
+                          width={40}
+                          height={40}
+                        />
+                      </div>
+                      <h2
+                        className={styles.directDeleteProduct}
+                        onClick={() => {
+                          setInputProductName(item.numeProdus);
+                          setInputProductCateg(item.categorieProdus);
+                          deleteMenuItem();
+                        }}
+                      >
+                        <Image
+                          src={"/static/close.svg"}
+                          alt=""
+                          width={30}
+                          height={30}
+                        />
+                      </h2>
+                    </>
+                  ) : null} */}
                 <h2>{item.pretProdus} RON</h2>
               </div>
               <div className={styles.itemDescription}>

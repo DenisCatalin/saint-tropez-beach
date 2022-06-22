@@ -74,3 +74,9 @@
         transform: translate(-50%, -75%) rotate(360deg)
     }
 }
+
+@media screen and (min-width: 393px) {
+    .temperatureContainer .temperatureLiquid {
+        width: 400px;
+    }
+}
