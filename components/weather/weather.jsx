@@ -122,8 +122,9 @@ const Weather = () => {
       <div className={styles.mapouter}>
         <div className={styles.gmap_canvas}>
           <iframe
-            width={width > 400 ? "350" : width - 20}
-            height={height > 760 ? "350" : height / 2.15}
+            width={width > 400 ? "350" : width - 50}
+            height={height > 760 ? "350" : height / 2.75}
+            style={{ marginRight: width > 400 ? "0px" : "35px" }}
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=saint%20tropez%20beach%20mamaia&t=z=11&ie=UTF8&iwloc=&output=embed"
             frameBorder="0"

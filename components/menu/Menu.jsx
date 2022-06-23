@@ -222,7 +222,7 @@ const Menu = () => {
           {racoritoare.map((item, i) => (
             <div className={styles.menuItem} key={i}>
               <div className={styles.itemName}>
-                <h2>{item.numeProdus}</h2>
+                <h2 className={styles.textProd}>{item.numeProdus}</h2>
                 {/* {getLogged ? (
                     <>
                       <div
@@ -261,7 +261,7 @@ const Menu = () => {
                       </h2>
                     </>
                   ) : null} */}
-                <h2>{item.pretProdus} RON</h2>
+                <h2 className={styles.textProd}>{item.pretProdus} RON</h2>
               </div>
               <div className={styles.itemDescription}>
                 {item.descriereProdus}

@@ -10,6 +10,8 @@ import Schedule from "../components/schedule/schedule";
 import About from "../components/about/about";
 import useWindowDimensions from "../utils/useWindowDimensions";
 
+// 320 x 449
+
 export default function Home() {
   const [pressHome, setPressHome] = useState(false);
   const [pressMenu, setPressMenu] = useState(true);
@@ -17,7 +19,7 @@ export default function Home() {
   const [pressGallery, setPressGalery] = useState(false);
   const [pressAbout, setPressAbout = false] = useState(false);
 
-  const { height } = useWindowDimensions();
+  const { height, width } = useWindowDimensions();
 
   const resetNavbar = () => {
     setPressHome(false);
@@ -78,7 +80,7 @@ export default function Home() {
           <motion.p
             className={pressHome ? styles.navbarTextPressed : styles.navbarText}
             animate={{
-              y: pressHome ? (height > 750 ? 50 : 40) : 0,
+              y: pressHome ? (height > 750 ? 50 : width / 10) : 0,
             }}
           >
             ACASA
@@ -107,7 +109,7 @@ export default function Home() {
               pressSchedule ? styles.navbarTextPressed : styles.navbarText
             }
             animate={{
-              y: pressSchedule ? (height > 750 ? 50 : 40) : 0,
+              y: pressSchedule ? (height > 750 ? 50 : width / 10) : 0,
             }}
           >
             PROGRAM
@@ -135,7 +137,7 @@ export default function Home() {
           <motion.p
             className={pressMenu ? styles.navbarTextPressed : styles.navbarText}
             animate={{
-              y: pressMenu ? (height > 750 ? 50 : 40) : 0,
+              y: pressMenu ? (height > 750 ? 50 : width / 10) : 0,
             }}
           >
             MENIU
@@ -164,7 +166,7 @@ export default function Home() {
               pressGallery ? styles.navbarTextPressed : styles.navbarText
             }
             animate={{
-              y: pressGallery ? (height > 750 ? 50 : 40) : 0,
+              y: pressGallery ? (height > 750 ? 50 : width / 10) : 0,
             }}
           >
             GALERIE
@@ -193,7 +195,7 @@ export default function Home() {
               pressAbout ? styles.navbarTextPressed : styles.navbarText
             }
             animate={{
-              y: pressAbout ? (height > 750 ? 50 : 40) : 0,
+              y: pressAbout ? (height > 750 ? 50 : width / 10) : 0,
             }}
           >
             DESPRE

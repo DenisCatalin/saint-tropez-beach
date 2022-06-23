@@ -202,3 +202,9 @@
     align-items: center;
     list-style: none;
 }
+
+@media screen and (max-width: 358px) and (max-height: 550px) {
+    .textProd {
+        font-size: 1.2em;
+    }
+}    

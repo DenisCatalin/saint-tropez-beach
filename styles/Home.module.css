@@ -40,6 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 10;
 }
 
 .navbarItem {
@@ -109,5 +110,44 @@
         width: 25px;
         height: 25px;
         position: relative;
+    }
+}
+
+@media screen and (max-width: 358px) and (max-height: 550px) {
+    .logoSpace {
+        width: 150px;
+        height: 100px;
+        position: relative;
+    }
+    
+    .navbarButton {
+        width: 40px;
+        height: 40px;
+        background: var(--darkColor);
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navbarTextPressed {
+        font-size: .9em;
+    }
+    
+    .navbarText {  
+        font-size: .7em;
+    }
+    
+    .navbarAlo {
+        width: 24px;
+        height: 50px;
+        position: relative;
+    }
+
+    .navbar {
+        transform: translateY(-30%);
+        height: 14vh;
     }
 }
