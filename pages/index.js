@@ -9,6 +9,7 @@ import Gallery from "../components/gallery/gallery";
 import Schedule from "../components/schedule/schedule";
 import About from "../components/about/about";
 import useWindowDimensions from "../utils/useWindowDimensions";
+import { isIOS } from "react-device-detect";
 
 // 320 x 449
 
@@ -32,14 +33,14 @@ export default function Home() {
   const pressed = {
     rotate: 45,
     y: height > 750 ? -55 : -40,
-    outline: "5px solid rgba(84, 171, 183, 1)",
+    outline: isIOS ? "none" : "5px solid rgba(84, 171, 183, 1)",
   };
 
   const pressedLast = {
     rotate: 45,
     y: height > 750 ? -55 : -40,
     scale: 0.9,
-    outline: "5px solid rgba(84, 171, 183, 1)",
+    outline: isIOS ? "none" : "5px solid rgba(84, 171, 183, 1)",
   };
 
   const unpressed = {
