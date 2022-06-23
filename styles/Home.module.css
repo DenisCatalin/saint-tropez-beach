@@ -79,6 +79,14 @@
     position: relative;
 }
 
+@supports (-webkit-touch-callout: none) {
+    .navbarButton {
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }    
+}
+
 @media screen and (max-width: 385px) and (max-height: 750px) {
     .logoSpace {
         width: 160px;
