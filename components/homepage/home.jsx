@@ -16,12 +16,16 @@ const Home = () => {
             scale: 0.8,
           }}
         >
-          <Image
-            src={"/static/facebook.svg"}
-            alt="Facebook"
-            width={25}
-            height={25}
-          />
+          <Link href="https://www.facebook.com/Saint-Tropez-Beach-110601643965275">
+            <a target="_blank">
+              <Image
+                src={"/static/facebook.svg"}
+                alt="Facebook"
+                width={25}
+                height={25}
+              />
+            </a>
+          </Link>
         </motion.button>
         <motion.button
           className={styles.social}
@@ -29,12 +33,16 @@ const Home = () => {
             scale: 0.8,
           }}
         >
-          <Image
-            src={"/static/instagram.svg"}
-            alt="Instagram"
-            width={25}
-            height={25}
-          />
+          <Link href="https://instagram.com/sainttropezbeach?igshid=YmMyMTA2M2Y=">
+            <a target="_blank">
+              <Image
+                src={"/static/instagram.svg"}
+                alt="Instagram"
+                width={25}
+                height={25}
+              />
+            </a>
+          </Link>
         </motion.button>
         <motion.button
           className={styles.social}
@@ -42,7 +50,7 @@ const Home = () => {
             scale: 0.8,
           }}
         >
-          <Link href="tel:0721828383">
+          <Link href="tel:0000000">
             <a>
               <Image
                 src={"/static/phone.svg"}
