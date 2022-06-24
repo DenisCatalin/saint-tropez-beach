@@ -1,0 +1,57 @@
+{"items":[
+    {
+        "numeProdus": "Pepsi",
+        "descriereProdus": "250ml",
+        "pretProdus": "8"
+    },
+    {
+        "numeProdus": "Pepsi Max",
+        "descriereProdus": "250ml",
+        "pretProdus": "8"
+    },
+    {
+        "numeProdus": "Mirinda",
+        "descriereProdus": "250ml",
+        "pretProdus": "8"
+    },
+    {
+        "numeProdus": "7 UP",
+        "descriereProdus": "250ml",
+        "pretProdus": "8"
+    },
+    {
+        "numeProdus": "Evervess",
+        "descriereProdus": "250ml",
+        "pretProdus": "8"
+    },
+    {
+        "numeProdus": "Prigat",
+        "descriereProdus": "(Portocale, Piersici, Kiwi, Capsuni, Banane) - 250ml",
+        "pretProdus": "9"
+    },
+    {
+        "numeProdus": "Lipton",
+        "descriereProdus": "(Lemon, Green, Peach) - 250ml",
+        "pretProdus": "9"
+    },
+    {
+        "numeProdus": "Bucovina Plata",
+        "descriereProdus": "500ml",
+        "pretProdus": "6"
+    },
+    {
+        "numeProdus": "Bucovina Carbo",
+        "descriereProdus": "500ml",
+        "pretProdus": "6"
+    },
+    {
+        "numeProdus": "Bucovina Carbo",
+        "descriereProdus": "500ml",
+        "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Borsec Carbo",
+        "descriereProdus": "750ml",
+        "pretProdus": "12"
+    }
+]}

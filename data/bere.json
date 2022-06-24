@@ -1,0 +1,27 @@
+{"items":[
+    {
+        "numeProdus": "Ursus Retro",
+        "descriereProdus": "330ml",
+        "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Kozel Premium",
+        "descriereProdus": "330ml",
+        "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Kozel Dark",
+        "descriereProdus": "330ml",
+        "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Ursus Draft",
+        "descriereProdus": "400ml",
+        "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Peroni Draft",
+        "descriereProdus": "400ml",
+        "pretProdus": "10"
+    }
+]}

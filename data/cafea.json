@@ -1,0 +1,27 @@
+{"items":[
+    {
+        "numeProdus": "Espresso Scurt",
+        "descriereProdus": "25ml",
+        "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Espresso Lung",
+        "descriereProdus": "60ml",
+        "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Cappucino",
+        "descriereProdus": "120ml",
+        "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Latte Macchiato",
+        "descriereProdus": "210ml",
+        "pretProdus": "14"
+    },
+    {
+        "numeProdus": "Frappe",
+        "descriereProdus": "(Topping ciocolata, Caramel) - 350ml",
+        "pretProdus": "16"
+    }
+]}
