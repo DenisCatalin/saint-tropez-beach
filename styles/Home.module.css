@@ -157,3 +157,9 @@
         height: 14vh;
     }
 }
+
+@media screen and (max-height: 430px) {
+    .container {
+        display: none;
+    }
+} 

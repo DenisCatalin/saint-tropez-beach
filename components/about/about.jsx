@@ -1,11 +1,18 @@
 import React from "react";
-import Image from "next/image";
 import styles from "./About.module.css";
 
 const About = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.team}>
+      <h1>Urmeaza...</h1>
+    </div>
+  );
+};
+
+export default About;
+
+{
+  /* <div className={styles.team}>
         <div className={styles.img}>
           <Image src={"/static/test.jpg"} alt="" layout="fill" />
         </div>
@@ -39,9 +46,5 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default About;
+      </div> */
+}

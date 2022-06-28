@@ -5,6 +5,11 @@
         "pretProdus": "10"
     },
     {
+        "numeProdus": "Ursus Cooler",
+        "descriereProdus": "Lamaie - 330ml",
+        "pretProdus": "10"
+    },
+    {
         "numeProdus": "Kozel Premium",
         "descriereProdus": "330ml",
         "pretProdus": "10"
@@ -23,5 +28,31 @@
         "numeProdus": "Peroni Draft",
         "descriereProdus": "400ml",
         "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Salitos Tequila",
+        "descriereProdus": "330ml",
+        "pretProdus": "15"
+    },
+    {
+        "numeProdus": "Salitos Blue",
+        "descriereProdus": "330ml",
+        "pretProdus": "20"
+    },
+    {
+        "numeProdus": "Salitos Pink",
+        "descriereProdus": "330ml",
+        "pretProdus": "20"
+    }
+    ,
+    {
+        "numeProdus": "Kingswood",
+        "descriereProdus": "400ml",
+        "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Rockstar",
+        "descriereProdus": "250ml",
+        "pretProdus": "8"
     }
 ]}

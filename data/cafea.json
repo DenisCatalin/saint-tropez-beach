@@ -11,17 +11,23 @@
     },
     {
         "numeProdus": "Cappucino",
-        "descriereProdus": "120ml",
+        "descriereProdus": "200ml",
         "pretProdus": "12"
     },
     {
-        "numeProdus": "Latte Macchiato",
-        "descriereProdus": "210ml",
-        "pretProdus": "14"
+        "numeProdus": "Frappe",
+        "descriereProdus": "",
+        "pretProdus": "18"
     },
     {
-        "numeProdus": "Frappe",
-        "descriereProdus": "(Topping ciocolata, Caramel) - 350ml",
-        "pretProdus": "16"
+        "numeProdus": "Saint Tropez Frappe",
+        "descriereProdus": "Cu inghetata",
+        "pretProdus": "20"
+    },
+    {
+        "numeProdus": "Caffe Latte",
+        "descriereProdus": "240ml",
+        "pretProdus": "24"
     }
+    
 ]}
