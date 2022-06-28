@@ -214,7 +214,7 @@ const Menu = () => {
           ))}
         </section>
         <section className={styles.category} id="shot">
-          <h2 className={styles.categoryName}>Shot</h2>
+          <h2 className={styles.categoryName}>Shots</h2>
           {shot.map((item, i) => (
             <div className={styles.menuItem} key={i}>
               <div className={styles.itemName}>
