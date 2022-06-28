@@ -158,8 +158,15 @@
     }
 }
 
+@media screen and (max-height: 750px) {
+    .logoSpace {
+        width: 180px;
+        height: 130px;
+    }
+} 
+
 @media screen and (max-height: 430px) {
-    .container {
+    .backgroundImage, .header, .navbar {
         display: none;
     }
 } 

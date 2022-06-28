@@ -1,57 +1,22 @@
 {"items":[
     {
-        "numeProdus": "Jager",
+        "numeProdus": "Jagermeister",
         "descriereProdus": "25ml",
         "pretProdus": "7"
     },
     {
         "numeProdus": "B52",
-        "descriereProdus": "",
+        "descriereProdus": "25ml",
         "pretProdus": "12"
     },
     {
-        "numeProdus": "Vodka",
-        "descriereProdus": "",
+        "numeProdus": "Absolut Vodka",
+        "descriereProdus": "25ml",
         "pretProdus": "7"
     },
     {
-        "numeProdus": "Jameson",
-        "descriereProdus": "50ml",
-        "pretProdus": "16"
-    },
-    {
-        "numeProdus": "Aberlour",
-        "descriereProdus": "50ml",
-        "pretProdus": "30"
-    },
-    {
-        "numeProdus": "Absolut",
-        "descriereProdus": "50ml",
-        "pretProdus": "14"
-    },
-    {
-        "numeProdus": "Tequila",
-        "descriereProdus": "50ml",
-        "pretProdus": "14"
-    },
-    {
-        "numeProdus": "Chivas",
-        "descriereProdus": "50ml",
-        "pretProdus": "21"
-    },
-    {
-        "numeProdus": "Martell",
-        "descriereProdus": "50ml",
-        "pretProdus": "27"
-    },
-    {
-        "numeProdus": "Jack Daniels",
-        "descriereProdus": "50ml",
-        "pretProdus": "19"
-    },
-    {
-        "numeProdus": "Beefeater",
-        "descriereProdus": "Clasic Pink Strawberry, Blood Orange - 50ml",
-        "pretProdus": "14"
+        "numeProdus": "Tequila Olmeca",
+        "descriereProdus": "25ml",
+        "pretProdus": "7"
     }
 ]}

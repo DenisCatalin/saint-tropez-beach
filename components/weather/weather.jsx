@@ -107,8 +107,10 @@ const Weather = () => {
     <>
       <div className={styles.temperatureContainer}>
         <div className={styles.temperatureContent}>
-          <h2>{data?.name}</h2>
-          <h2>{data?.main?.feels_like.toFixed(1)}°C</h2>
+          <h2 className={styles.weatherContent}>{data?.name}</h2>
+          <h2 className={styles.weatherContent}>
+            {data?.main?.feels_like.toFixed(1)}°C
+          </h2>
         </div>
         <div className={styles.temperatureIcon}>
           <Image
@@ -119,21 +121,19 @@ const Weather = () => {
         </div>
         <div className={styles.temperatureLiquid}></div>
       </div>
-      <div className={styles.mapouter}>
-        <div className={styles.gmap_canvas}>
-          <iframe
-            width={width > 400 ? "350" : width - 50}
-            height={height > 760 ? "350" : height / 2.75}
-            style={{ marginRight: width > 400 ? "0px" : "35px" }}
-            id="gmap_canvas"
-            src="https://maps.google.com/maps?q=saint%20tropez%20beach%20mamaia&t=z=11&ie=UTF8&iwloc=&output=embed"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-          ></iframe>
-        </div>
-      </div>
+      <iframe
+        width={"85%"}
+        height={
+          height > 800 ? "400" : height < 600 ? height - 320 : height - 370
+        }
+        style={{ marginTop: height > 800 ? "25px" : "20px" }}
+        id="gmap_canvas"
+        src="https://maps.google.com/maps?q=saint%20tropez%20beach%20mamaia&t=z=11&ie=UTF8&iwloc=&output=embed"
+        frameBorder="0"
+        scrolling="no"
+        marginHeight="0"
+        marginWidth="0"
+      ></iframe>
     </>
   );
 };

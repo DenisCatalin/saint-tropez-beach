@@ -6,11 +6,11 @@
 }
 
 .socialMedia {
-    width: 80%;
+    width: 90%;
     height: 80px;
     transform: translateY(-15%);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -48,3 +48,9 @@
         height: 40px;
     }
 }  
+
+@media screen and (max-height: 430px) {
+    .container {
+        display: none;
+    }
+} 

@@ -11,3 +11,9 @@
     padding: 1rem;
     overflow: auto;
 }
+
+@media screen and (max-height: 430px) {
+    .container {
+        display: none;
+    }
+} 
