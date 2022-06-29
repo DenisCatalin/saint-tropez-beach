@@ -53,5 +53,10 @@
         "numeProdus": "Borsec Carbo",
         "descriereProdus": "750ml",
         "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Rockstar",
+        "descriereProdus": "250ml",
+        "pretProdus": "8"
     }
 ]}

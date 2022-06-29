@@ -25,14 +25,14 @@
         "pretProdus": "22"
     },
     {
+        "numeProdus": "Green Apple",
+        "descriereProdus": "250ml",
+        "pretProdus": "17"
+    },
+    {
         "numeProdus": "Hugo",
         "descriereProdus": "250ml",
         "pretProdus": "24"
-    },
-    {
-        "numeProdus": "Daiquri",
-        "descriereProdus": "",
-        "pretProdus": "20"
     },
     {
         "numeProdus": "Mojito",
@@ -43,6 +43,11 @@
         "numeProdus": "Pina Colada",
         "descriereProdus": "250ml",
         "pretProdus": "24"
+    },
+    {
+        "numeProdus": "Nada Colada",
+        "descriereProdus": "250ml",
+        "pretProdus": "17"
     },
     {
         "numeProdus": "Sex on The Beach",
