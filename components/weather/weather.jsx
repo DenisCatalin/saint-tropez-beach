@@ -132,6 +132,7 @@ const Weather = () => {
         frameBorder="0"
         scrolling="no"
         marginHeight="0"
+        className={styles.weatherFrame}
         marginWidth="0"
       ></iframe>
     </>

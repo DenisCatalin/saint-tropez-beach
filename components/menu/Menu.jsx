@@ -13,6 +13,7 @@ import {
   getSpirits,
   getBered,
 } from "../../lib/menu";
+import Image from "next/image";
 
 const Menu = () => {
   const [showCategories, setShowCategories] = useState(false);
@@ -87,7 +88,7 @@ const Menu = () => {
               <li onClick={() => setShowCategories(false)}>Cocktails</li>
             </a>
           </Link>
-          <Link href={"#shot"}>
+          <Link href={"#spirits"}>
             <a className={styles.navbarLink}>
               <li onClick={() => setShowCategories(false)}>Spirits</li>
             </a>
@@ -227,6 +228,9 @@ const Menu = () => {
             </div>
           ))}
         </section>
+        <div className={styles.grmfp}>
+          <Image src={"/static/grmfp.jpg"} alt="" layout="fill" />
+        </div>
       </div>
     </motion.div>
   );
