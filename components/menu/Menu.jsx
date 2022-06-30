@@ -229,7 +229,13 @@ const Menu = () => {
           ))}
         </section>
         <div className={styles.grmfp}>
-          <Image src={"/static/grmfp.jpg"} alt="" layout="fill" />
+          <Image
+            src={"/static/grmfp.jpg"}
+            alt=""
+            layout="fill"
+            priority
+            placeholder="blur"
+          />
         </div>
       </div>
     </motion.div>
