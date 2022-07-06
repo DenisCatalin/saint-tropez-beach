@@ -203,8 +203,8 @@
 }
 
 .grmfp {
-    width: 100%;
-    height: 60vh;
+    width: 50%;
+    height: 100vh;
     position: relative;
 }
 
@@ -229,5 +229,12 @@
 @media screen and (max-height: 430px) {
     .container {
         display: none;
+    }
+} 
+
+@media screen and (max-height: 930px) {
+    .grmfp {
+        width: 100%;
+        height: 60vh;
     }
 } 

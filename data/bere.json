@@ -33,11 +33,45 @@
         "numeProdus": "Salitos Pink",
         "descriereProdus": "330ml",
         "pretProdus": "20"
-    }
-    ,
+    },
     {
         "numeProdus": "Kingswood",
         "descriereProdus": "400ml",
         "pretProdus": "10"
+    },
+    {
+        "numeProdus": "Peroni",
+        "descriereProdus": "33ml",
+        "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Peroni NA",
+        "descriereProdus": "330ml",
+        "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Ursus NA",
+        "descriereProdus": "330ml",
+        "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Azuga Nefiltrata Weiss",
+        "descriereProdus": "500ml",
+        "pretProdus": "15"
+    },
+    {
+        "numeProdus": "Azuga Nepasteurizata",
+        "descriereProdus": "500ml",
+        "pretProdus": "15"
+    },
+    {
+        "numeProdus": "Breezer Watermelon",
+        "descriereProdus": "275ml",
+        "pretProdus": "20"
+    },
+    {
+        "numeProdus": "Breezer Lime",
+        "descriereProdus": "275ml",
+        "pretProdus": "20"
     }
 ]}

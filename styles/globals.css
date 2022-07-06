@@ -13,3 +13,13 @@
   --myWhiteColor: #EEEEEE;
   --temperatureBackground: rgba(58, 115, 123, .5);
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(109, 109, 109);
+  border-radius: 20px;
+}

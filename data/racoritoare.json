@@ -58,5 +58,25 @@
         "numeProdus": "Rockstar",
         "descriereProdus": "250ml",
         "pretProdus": "8"
+    },
+    {
+        "numeProdus": "Redbull",
+        "descriereProdus": "250ml",
+        "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Redbull Pepene Rosu",
+        "descriereProdus": "250ml",
+        "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Redbull Cactus",
+        "descriereProdus": "250ml",
+        "pretProdus": "12"
+    },
+    {
+        "numeProdus": "Redbull Sugar free",
+        "descriereProdus": "250ml",
+        "pretProdus": "12"
     }
 ]}
