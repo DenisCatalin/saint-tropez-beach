@@ -66,7 +66,7 @@ export default function Home() {
             setPressHome(true);
           }}
         >
-          <Image src={"/static/log00.png"} alt="" layout="fill" />
+          <Image src={"/static/log00.png"} alt="" layout="fill" priority />
         </div>
       </div>
 

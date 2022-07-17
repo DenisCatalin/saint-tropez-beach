@@ -10,7 +10,13 @@ const Photo = ({ url }) => {
   return (
     <>
       <div className={styles.photo} onClick={() => setOpen(!open)}>
-        <Image src={url} className={styles.image} alt="" layout="fill" />
+        <Image
+          src={url}
+          className={styles.image}
+          alt=""
+          layout="fill"
+          priority
+        />
       </div>
       <Modal
         isOpen={open}
