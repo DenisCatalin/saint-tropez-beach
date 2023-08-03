@@ -25,7 +25,6 @@
 
 .team::before {
     content: '';
-    background-image: url('../../public/static/test.jpg');
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -39,7 +38,7 @@
 }
 
 .img {
-    position:relative;
+    position: relative;
     width: 320px;
     height: 480px;
     object-fit: contain;
@@ -133,4 +132,4 @@
     .container {
         display: none;
     }
-} 
+}
