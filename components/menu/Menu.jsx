@@ -271,7 +271,7 @@ const Menu = () => {
       </motion.div>
       {userRedux.data.admin === true && (
         <button className={styles.addCategory} onClick={handleOpenAddCategoryDialog}>
-          <Image src={"/static/add.svg"} width={30} height={30} /> Adauga categorie
+          <Image src={"/static/add.svg"} alt="" width={30} height={30} /> Adauga categorie
         </button>
       )}
       <div className={styles.overflow}>
