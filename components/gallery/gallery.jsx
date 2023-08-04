@@ -11,7 +11,7 @@ const Gallery = () => {
   return (
     <>
       <motion.div className={styles.container} animate={{ scale: [0, 1] }}>
-        {images.map((item) => (
+        {images.map(item => (
           <Photo url={item?.url} key={item?.id} />
         ))}
       </motion.div>

@@ -115,6 +115,7 @@ const Menu = () => {
   }
 
   const addNewCategoryMenu = async () => {
+    if (userRedux.data.admin === false || userRedux.data.admin === undefined) return;
     if (inputCategory.current.value.length === 0) return;
     await meniu.add({
       categorie: inputCategory.current.value,
@@ -125,6 +126,7 @@ const Menu = () => {
   };
 
   const addItemInCategory = async () => {
+    if (userRedux.data.admin === false || userRedux.data.admin === undefined) return;
     if (
       itemName.current.value.length === 0 ||
       itemDescription.current.value.length === 0 ||
@@ -159,6 +161,7 @@ const Menu = () => {
   };
 
   const editCategory = async () => {
+    if (userRedux.data.admin === false || userRedux.data.admin === undefined) return;
     if (inputEditCategory.current.value.length === 0) return;
     const actualID = await getDocumentIdByFieldValue("categorie", currentCategory);
     const docRef = meniu.doc(actualID);
@@ -178,6 +181,7 @@ const Menu = () => {
   };
 
   const deleteCategory = async category => {
+    if (userRedux.data.admin === false || userRedux.data.admin === undefined) return;
     const actualID = await getDocumentIdByFieldValue("categorie", category);
     try {
       await firestore.collection("meniu").doc(actualID).delete();
@@ -189,6 +193,7 @@ const Menu = () => {
   };
 
   const editItem = async () => {
+    if (userRedux.data.admin === false || userRedux.data.admin === undefined) return;
     const actualID = await getDocumentIdByFieldValue("categorie", currentCategory);
     const docRef = meniu.doc(actualID);
     let items = products;
@@ -220,6 +225,7 @@ const Menu = () => {
   };
 
   const deleteItem = async () => {
+    if (userRedux.data.admin === false || userRedux.data.admin === undefined) return;
     const actualID = await getDocumentIdByFieldValue("categorie", currentCategory);
     const docRef = meniu.doc(actualID);
     let items = products;
@@ -397,19 +403,19 @@ const Menu = () => {
           tastezi numele dorit pentru categorie in campul de mai jos.
           <input
             type="text"
-            placeholder={currentItem.numeProdus}
             className={styles.inputAddCategory}
             ref={itemName}
+            defaultValue={currentItem.numeProdus}
           />
           <textarea
             type="text"
-            placeholder={currentItem.descriereProdus}
+            defaultValue={currentItem.descriereProdusProdus}
             className={styles.inputAddCategory}
             ref={itemDescription}
           />
           <input
             type="text"
-            placeholder={currentItem.pretProdus}
+            defaultValue={currentItem.pretProdus}
             className={styles.inputAddCategory}
             ref={itemPrice}
           />
