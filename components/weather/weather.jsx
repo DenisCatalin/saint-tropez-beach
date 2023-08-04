@@ -114,7 +114,7 @@ const Weather = () => {
         </div>
         <div className={styles.temperatureIcon}>
           <Image
-            src={data ? getPhoto(data.weather[0].icon) : "/static/01d.png"}
+            src={data ? getPhoto(data.weather[0].icon) : "/static/add.svg"}
             alt=""
             layout="fill"
           />

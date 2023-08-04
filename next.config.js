@@ -14,7 +14,8 @@ module.exports = {
       "pexels.com",
       "i.ibb.co",
       "www.instagram.com",
-      "api.openweathermap.org"
+      "api.openweathermap.org",
+      "lh3.googleusercontent.com",
     ],
   },
 };
